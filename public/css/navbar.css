@@ -1,0 +1,43 @@
+
+.header {
+    background-color: #007BFF;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+}
+
+
+.header-item-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+
+.header-item {
+    margin-right: 20px;
+}
+
+.header-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.header-item a:hover {
+    color: #d1e8ff;
+}
+
+
+.header-item:last-child {
+    margin-right: 0;
+}
+
+
