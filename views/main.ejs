@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/main.css">
+<%- include('includes/head.ejs')  %>
+<body>
+<%- include('includes/navbar.ejs')  %>
+    <main>
+        <h1>Tasks list</h1>
+        <% if(users.length>0){%>
+        <% for (let task of users)  { %>
+            
+        <div class="card">
+          
+            <div class="container">
+                <p>Topshiriq nomi: <%= task.taskname %></p>
+                <p>Topshiriq fani: <%= task.subjectname %></p>
+                <% if(task.situation === "Boshlanmagan") { %>
+                    <p class="not">Topshiriq holati: <%= task.situation %></p>
+                <% } %>
+                <% if(task.situation === "Tugallanmagan") { %>
+                    <p class="half">Topshiriq holati: <%= task.situation %></p>
+                <% } %>
+                <% if(task.situation === "Tugallangan") { %>
+                    <p class="full">Topshiriq holati: <%= task.situation %></p>
+                <% } %>
+                <a href="/task/<%= task.id %>" class="btn">Batafsil ma'lumot</a>
+            </div>
+        </div>
+        <% } %>
+        <%} else {    %>
+            <p>Barcha topshiriqlar ro'yxati</p>
+        <%} %> 
+    </main>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<%- include('includes/head.ejs')  %>
+<%- include('includes/navbar.ejs')  %> 
+<link rel="stylesheet" href="/css/user-page.css">
+<main>
+    <% if (task) { %>
+        <div class="card">
+           
+            <div class="container">
+                <p>Topshiriq nomi: <%= task.taskname %></p>
+                <p>Topshiriq fani: <%= task.subjectname %></p>
+                <p>Topshiriq holati: <%= task.situation %></p>
+                <a href="/task/<%= task.id %>/edit" class="btn">Tahrirlash</a>
+                <a href="/task/<%= task.id %>/delete" class="btn">O'chirish</a>
+                
+            </div>
+        </div>
+    <% } else { %>
+        <p>Barcha userlar listi</p>
+    <% } %>
+</main>
